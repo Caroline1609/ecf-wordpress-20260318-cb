@@ -105,6 +105,8 @@ Dans vos templates, entre l'en-tête et le pied de page :
     * La date de publication.
     * La catégorie (cliquable)
 
+- Sous les articles, ajouter les liens de pagination
+
 ### single.php 
 
 - L'article est affiché dans une balise `<article>` (largeur 100%) :
