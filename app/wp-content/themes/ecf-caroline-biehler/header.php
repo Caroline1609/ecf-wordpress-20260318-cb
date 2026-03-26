@@ -11,14 +11,26 @@
 
 <body <?php body_class(); ?>>
     <?php wp_body_open(); ?>
-    <header>
-        <div class="site-navigation">
-            <nav>
-                <?php wp_nav_menu(['theme_location' => 'menuPrincipal']); ?> 
-            </nav>
-        </div>
+    <header class="header-nav">
+        <nav class="site-navigation">
+            <div>
+                <p class="titre-wp"><?php bloginfo('name'); ?></p>
+            </div>
+            <div>
+                <?php wp_nav_menu(['theme_location' => 'menuPrincipal']); ?>
+            </div>
+
+        </nav>
+
     </header>
 
-    
-<main>
-    <!-- FIN HEADER -->
+<div class="position">
+
+
+    <aside class="site-aside">
+        <!-- SIDEBAR -->
+        <?php dynamic_sidebar('left'); ?>
+    </aside>
+
+    <main>
+        <!-- FIN HEADER -->

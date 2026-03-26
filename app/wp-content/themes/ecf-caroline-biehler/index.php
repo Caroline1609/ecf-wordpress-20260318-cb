@@ -1,20 +1,25 @@
 <?php get_header(); ?>
 
-<h1>archive</h1>
+<div class="voyage">
+    <div>
+        <h3>Mes voyages</h3>
+    </div>
+    <div>
+        <hr>
+    </div>
+</div>
+
 
 <div class="card">
 
-
     <?php
-
-
-    if (have_posts()): 
-        while (have_posts()): 
+    if (have_posts()):
+        while (have_posts()):
             the_post();
             ?>
 
 
-            <article class="archive">
+            <article class="index-conteneur">
                 <header>
                     <div class="conteneur_img">
 
