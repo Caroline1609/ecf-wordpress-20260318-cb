@@ -3,3 +3,7 @@ Theme Name: ecf-caroline-biehler
 Author: Caroline
 Version: 1
 */
+
+article{
+    border: 2px solid black;
+}
