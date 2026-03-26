@@ -6,15 +6,15 @@ Version: 1
 
 
 
-:root{
-    --texte : #000000;
-    --grisClair :  #EEEEEE;
-    --titrePrincipal :   #1b296a;
-    --orange : #ed6840;
+:root {
+    --texte: #000000;
+    --grisClair: #EEEEEE;
+    --titrePrincipal: #1b296a;
+    --tag: #ed6840;
 
 }
 
-ul{
+ul {
     list-style: none;
 }
 
@@ -23,8 +23,8 @@ ul{
     src: url('./font/Montserrat-Italic-VariableFont_wght.ttf');
 }
 
-body{
-    font-family: Montserrat ;
+body {
+    font-family: Montserrat;
     margin: 0;
     padding: 0;
 
@@ -34,7 +34,7 @@ body{
     box-sizing: border-box;
 }
 
-.position{
+.position {
     display: flex;
     flex-direction: row;
 
@@ -44,23 +44,73 @@ main {
     flex: 1;
 }
 
+/* fond index.php*/
+
+.fond {
+    position: relative;
+    height: 500px;
+    background-image: url("./assets/homepage.png");
+    background-size: cover;
+    background-position: center;
+    justify-content: center;
+    color: white;
+    margin-bottom: 30px ;
+}
+
+.fond-transparent {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom,
+            rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.3),
+            rgba(255, 255, 255, 0.9));
+}
+
+.fond-texte {
+    position: relative;
+    max-width: 700px;
+    top: 261px;
+    left: 40px;
+}
+
+.nomprenom {
+    background: var(--tag);
+    padding: 10px;
+    font-size: 12px;
+    margin-bottom: 10px;
+}
+
+.fond h1 {
+    font-size: 40px;
+    margin: 10px 0;
+}
+
+.fond p {
+    font-size: 18px;
+}
+
+
+
+
+
 /* Header principal de la page */
 
 
 .site-navigation {
     display: flex;
-    justify-content: space-between; 
+    justify-content: space-between;
     align-items: center;
     background-color: var(--grisClair);
 
 }
 
-.site-navigation ul{
+.site-navigation ul {
     display: flex;
     gap: 2rem;
 }
 
-.site-navigation .titre-wp{
+.site-navigation .titre-wp {
     font-size: 30px;
     color: var(--titrePrincipal);
     margin: 0;
@@ -69,27 +119,29 @@ main {
 
 /* index */
 
-.voyage{
+.voyage {
     display: flex;
     align-items: center;
+    margin-bottom: 30px;
 }
 
-h3{
-    margin:0;
+h3 {
+    margin: 0;
+    color: (var(--titrePrincipal));
+    font-size: 30px;
 }
 
-hr{
-    border: 1px solid #000000;
-    width: 200px;
-    margin-left: 10px ;
+hr {
+    border: 1px solid var(--titrePrincipal);
+    width: 900px;
+    margin-left: 10px;
 }
 
 
-/*Les cards de l'index */
+/*Les cards de l'index.php */
 
 main .index-conteneur {
     width: 360px;
-    border-radius: var(--arrondi);
     overflow: hidden;
     background-color: var(--fond_card);
 
@@ -100,7 +152,76 @@ main .card {
     flex-wrap: wrap;
     justify-content: center;
     align-items: stretch;
-gap: 3rem;
+    gap: 3rem;
+
+}
+
+section {
+    padding: 19px;
+}
+
+h2 {
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: var(--title);
+}
+
+.conteneur_img {
+    position: relative;
+    height: 220px;
+
+}
+
+.conteneur_img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+}
+
+.conteneur_img span {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    padding: 6px 12px;
+    background-color: white;
+}
+
+section p {
+    text-align: justify;
+}
+
+
+
+
+
+
+/* Aside Sidebard */
+
+.site-aside {
+    width: 200px;
+}
+
+/* archive */
+main .archive {
+    width: 350px;
+    border-radius: var(--arrondi);
+    overflow: hidden;
+    background-color: var(--fond_card);
+    
+
+
+}
+
+main .card {
+    display: flex;
+    gap: 5rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
 
 }
 
@@ -139,32 +260,4 @@ a {
     background-color: white;
     border-radius: 15px;
 }
-
-
-
-
-
-
-/* Aside Sidebard */
-
-.site-aside{
-    width: 200px;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 

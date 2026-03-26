@@ -14,6 +14,7 @@ if(have_posts()) :
 <article class="index">
     <header>
         <h1><?php the_title(); ?></h1>
+        <?php the_category(', '); ?>
     </header>
     <section>
         <?php the_post_thumbnail('large'); ?>
@@ -21,10 +22,16 @@ if(have_posts()) :
         Le <?php the_date(); ?>
         <?php the_content(); ?>
     </section>
-    <footer>
-        <?php the_category(', '); ?>
-    </footer>
 </article>
+
+<nav class="post-navigation">
+    <div class="nav-previous">
+        <?php previous_post_link('← Article précédent'); ?>
+    </div>
+    <div class="nav-next">
+        <?php next_post_link('Article suivant →'); ?>
+    </div>
+</nav>
 
 <?php
     endwhile;

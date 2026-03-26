@@ -1,5 +1,15 @@
 <?php get_header(); ?>
 
+<header class="fond">
+  <div class="fond-transparent"></div>
+
+  <div class="fond-texte">
+    <span class="nomprenom">BIEHLER Caroline</span>
+    <h1>Les villes du monde</h1>
+    <p>Un blog qui vous fait découvrir les recoins peu connus de nos grandes villes.</p>
+  </div>
+</header>
+
 <div class="voyage">
     <div>
         <h3>Mes voyages</h3>
